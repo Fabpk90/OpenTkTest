@@ -14,12 +14,20 @@ namespace test
         private float[] vertices =
         {
             -0.5f, -0.5f,
-            0.0f, 0.5f,
             0.5f, -0.5f,
+            0.5f, 0.5f,
+            -0.5f, .5f,
+        };
+
+        private uint[] indexes =
+        {
+            0, 1, 2,
+            2, 3, 0
         };
 
         private int buffer;
         private int prog;
+        private int ibo;
 
         private string shaderVertex;
         private string shaderFragment;
@@ -95,6 +103,12 @@ namespace test
             GL.EnableVertexAttribArray(0);
             GL.VertexAttribPointer(0, 2, VertexAttribPointerType.Float, false, sizeof(float) * 2, 0);
 
+            
+            GL.GenBuffers(1, out ibo);
+            GL.BindBuffer(BufferTarget.ElementArrayBuffer, ibo);
+            GL.BufferData(BufferTarget.ElementArrayBuffer, indexes.Length * sizeof(uint), indexes, BufferUsageHint.StaticDraw);
+            
+            
             prog = GL.CreateProgram();
 
             ParseShader("Shaders/basic.shader", out shaderVertex, out shaderFragment);
@@ -157,7 +171,7 @@ namespace test
 
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 
-            GL.DrawArrays(PrimitiveType.Triangles, 0, 3);
+            GL.DrawElements(PrimitiveType.Triangles, indexes.Length, DrawElementsType.UnsignedInt, IntPtr.Zero);
 
             SwapBuffers();
         }
