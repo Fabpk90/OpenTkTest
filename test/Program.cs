@@ -111,7 +111,7 @@ namespace test
             
             prog = GL.CreateProgram();
 
-            ParseShader("Shaders/basic.shader", out shaderVertex, out shaderFragment);
+            ParseShader("Shaders/basic.glsl", out shaderVertex, out shaderFragment);
             
             //compile shader
             int vs = CompileShader(shaderVertex, ShaderType.VertexShader);
