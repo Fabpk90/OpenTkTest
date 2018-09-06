@@ -1,0 +1,11 @@
+F:\C#\opentk\test\test\bin\Release\test.exe.config
+F:\C#\opentk\test\test\bin\Release\test.exe
+F:\C#\opentk\test\test\bin\Release\test.pdb
+F:\C#\opentk\test\test\bin\Release\OpenTK.dll
+F:\C#\opentk\test\test\bin\Release\OpenTK.pdb
+F:\C#\opentk\test\test\bin\Release\OpenTK.xml
+F:\C#\opentk\test\test\obj\Release\test.csprojAssemblyReference.cache
+F:\C#\opentk\test\test\obj\Release\test.csproj.CoreCompileInputs.cache
+F:\C#\opentk\test\test\obj\Release\test.csproj.CopyComplete
+F:\C#\opentk\test\test\obj\Release\test.exe
+F:\C#\opentk\test\test\obj\Release\test.pdb
