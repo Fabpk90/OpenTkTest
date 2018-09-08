@@ -32,6 +32,8 @@ namespace test
         private string shaderVertex;
         private string shaderFragment;
 
+        private int locationUniform;
+
         public Program() : base(1280, // initial width
             720, // initial height
             GraphicsMode.Default,
@@ -129,6 +131,8 @@ namespace test
             GL.DeleteShader(fs);
             
             GL.UseProgram(prog);
+
+            locationUniform = GL.GetUniformLocation(prog, "u_color");
         }
 
         private int CompileShader(string source, ShaderType type)
@@ -170,7 +174,9 @@ namespace test
             Title = $"FPS: {1f / e.Time:0}";
 
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
-
+            
+            //could update the uniform here
+            GL.Uniform4(0, new Color4(.3f, 0.6f, 0.3f, 1.0f));
             GL.DrawElements(PrimitiveType.Triangles, indexes.Length, DrawElementsType.UnsignedInt, IntPtr.Zero);
 
             SwapBuffers();
