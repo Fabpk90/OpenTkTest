@@ -10,3 +10,16 @@ F:\C#\opentk\test\test\obj\Debug\test.csproj.CopyComplete
 F:\C#\opentk\test\test\obj\Debug\test.exe
 F:\C#\opentk\test\test\obj\Debug\test.pdb
 F:\C#\opentk\test\test\bin\Debug\Shaders\basic.shader
+F:\C#\OpenTk\test\bin\Debug\Shaders\basic.glsl
+F:\C#\OpenTk\test\bin\Debug\test.exe.config
+F:\C#\OpenTk\test\bin\Debug\test.exe
+F:\C#\OpenTk\test\bin\Debug\test.pdb
+F:\C#\OpenTk\test\bin\Debug\OpenTK.dll
+F:\C#\OpenTk\test\bin\Debug\OpenTK.pdb
+F:\C#\OpenTk\test\bin\Debug\OpenTK.xml
+F:\C#\OpenTk\test\obj\Debug\test.csprojAssemblyReference.cache
+F:\C#\OpenTk\test\obj\Debug\test.csproj.CoreCompileInputs.cache
+F:\C#\OpenTk\test\obj\Debug\test.csproj.CopyComplete
+F:\C#\OpenTk\test\obj\Debug\test.exe
+F:\C#\OpenTk\test\obj\Debug\test.pdb
+F:\C#\OpenTk\test\bin\Debug\StbSharp.dll

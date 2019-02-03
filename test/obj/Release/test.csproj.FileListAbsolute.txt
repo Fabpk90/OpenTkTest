@@ -9,3 +9,15 @@ F:\C#\opentk\test\test\obj\Release\test.csproj.CoreCompileInputs.cache
 F:\C#\opentk\test\test\obj\Release\test.csproj.CopyComplete
 F:\C#\opentk\test\test\obj\Release\test.exe
 F:\C#\opentk\test\test\obj\Release\test.pdb
+F:\C#\OpenTk\test\bin\Release\Shaders\basic.glsl
+F:\C#\OpenTk\test\bin\Release\test.exe.config
+F:\C#\OpenTk\test\bin\Release\test.exe
+F:\C#\OpenTk\test\bin\Release\test.pdb
+F:\C#\OpenTk\test\bin\Release\OpenTK.dll
+F:\C#\OpenTk\test\bin\Release\OpenTK.pdb
+F:\C#\OpenTk\test\bin\Release\OpenTK.xml
+F:\C#\OpenTk\test\obj\Release\test.csprojAssemblyReference.cache
+F:\C#\OpenTk\test\obj\Release\test.csproj.CoreCompileInputs.cache
+F:\C#\OpenTk\test\obj\Release\test.csproj.CopyComplete
+F:\C#\OpenTk\test\obj\Release\test.exe
+F:\C#\OpenTk\test\obj\Release\test.pdb
