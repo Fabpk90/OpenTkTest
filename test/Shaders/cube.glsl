@@ -4,12 +4,16 @@ layout(location = 0) in vec4 position;
 layout(location = 1) in vec3 color;
 layout(location = 2) in vec2 texCoord;
 
+uniform mat4 transform;
+uniform mat4 projection;
+uniform mat4 view;
+
 out vec3 aColor;
 out vec2 aTexCoord;
 
 void main()
 {
-    gl_Position = position;
+    gl_Position = projection * view * transform * position;
     aColor = color;
     aTexCoord = texCoord;
 }
@@ -27,5 +31,10 @@ out vec4 color;
 
 void main()
 {
-    color = mix(texture(tex0, aTexCoord) , texture(tex1, aTexCoord), 0.5 ) * vec4(aColor, 1.0);
+    if(tex1)
+    {
+       color = mix(texture(tex0, aTexCoord) , texture(tex1, aTexCoord), 0.5 ) * vec4(aColor, 1.0);
+    }
+    else
+       color = texture(tex0, aTexCoord) * vec4(aColor, 1.0);
 }

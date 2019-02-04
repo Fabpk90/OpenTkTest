@@ -4,6 +4,7 @@ using OpenTK.Graphics.OpenGL;
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using OpenTK.Input;
 using test.Shapes;
@@ -54,7 +55,7 @@ namespace test
                 0.1f, 100f);
             view = Matrix4.LookAt(new Vector3(0, 0, 5f), new Vector3(0, 0, -1), new Vector3(0, 1, 0));
             
-            cube = new Cube();
+            cube = new Cube("container.jpg");
         }
 
         protected override void OnKeyDown(KeyboardKeyEventArgs e)
@@ -78,6 +79,7 @@ namespace test
             Title = $"FPS: {1f / e.Time:0}";
 
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
+            GL.ClearColor(Color.Gray);
 
             cube.Draw((float)e.Time);
             
