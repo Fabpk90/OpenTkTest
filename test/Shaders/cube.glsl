@@ -25,16 +25,10 @@ in vec3 aColor;
 in vec2 aTexCoord;
 
 uniform sampler2D tex0;
-uniform sampler2D tex1;
 
 out vec4 color;
 
 void main()
 {
-    if(tex1)
-    {
-       color = mix(texture(tex0, aTexCoord) , texture(tex1, aTexCoord), 0.5 ) * vec4(aColor, 1.0);
-    }
-    else
-       color = texture(tex0, aTexCoord) * vec4(aColor, 1.0);
+    color = texture(tex0, aTexCoord) * vec4(aColor, 1.0);
 }

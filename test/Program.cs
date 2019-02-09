@@ -34,7 +34,7 @@ namespace test
         [STAThread]
         static void Main(string[] args)
         {
-            new Program().Run( 0, 75f);
+            new Program().Run( 60);
         }
         
         protected override void OnResize(EventArgs e)

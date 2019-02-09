@@ -23,3 +23,16 @@ F:\C#\OpenTk\test\obj\Debug\test.csproj.CopyComplete
 F:\C#\OpenTk\test\obj\Debug\test.exe
 F:\C#\OpenTk\test\obj\Debug\test.pdb
 F:\C#\OpenTk\test\bin\Debug\StbSharp.dll
+C:\Users\Fab\RiderProjects\OpenTkTest\test\bin\Debug\Shaders\basic.glsl
+C:\Users\Fab\RiderProjects\OpenTkTest\test\bin\Debug\test.exe.config
+C:\Users\Fab\RiderProjects\OpenTkTest\test\bin\Debug\test.exe
+C:\Users\Fab\RiderProjects\OpenTkTest\test\bin\Debug\test.pdb
+C:\Users\Fab\RiderProjects\OpenTkTest\test\bin\Debug\OpenTK.dll
+C:\Users\Fab\RiderProjects\OpenTkTest\test\bin\Debug\StbSharp.dll
+C:\Users\Fab\RiderProjects\OpenTkTest\test\bin\Debug\OpenTK.pdb
+C:\Users\Fab\RiderProjects\OpenTkTest\test\bin\Debug\OpenTK.xml
+C:\Users\Fab\RiderProjects\OpenTkTest\test\obj\Debug\test.csprojAssemblyReference.cache
+C:\Users\Fab\RiderProjects\OpenTkTest\test\obj\Debug\test.csproj.CoreCompileInputs.cache
+C:\Users\Fab\RiderProjects\OpenTkTest\test\obj\Debug\test.csproj.CopyComplete
+C:\Users\Fab\RiderProjects\OpenTkTest\test\obj\Debug\test.exe
+C:\Users\Fab\RiderProjects\OpenTkTest\test\obj\Debug\test.pdb

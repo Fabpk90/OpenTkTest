@@ -1,37 +1,37 @@
 using System;
 using System.IO;
+using OpenTK;
 using OpenTK.Graphics.OpenGL;
 
 namespace test
 {
-    public static class ShaderHandler
+    public class Shader
     {
+        public int ProgramId { get; }
 
-        public static int CreateShader(string path)
+        public Shader(string path)
         {
             string fragmentShader, vertexShader;
 
-            int shaderProgram = GL.CreateProgram();
+            ProgramId = GL.CreateProgram();
             
             ParseShader(path, out vertexShader, out fragmentShader);
 
             int fs = CompileShader(fragmentShader, ShaderType.FragmentShader);
             int vs = CompileShader(vertexShader, ShaderType.VertexShader);
             
-            GL.AttachShader(shaderProgram, fs);
-            GL.AttachShader(shaderProgram, vs);
+            GL.AttachShader(ProgramId, fs);
+            GL.AttachShader(ProgramId, vs);
 
             
-            GL.LinkProgram(shaderProgram);
-            GL.ValidateProgram(shaderProgram);
+            GL.LinkProgram(ProgramId);
+            GL.ValidateProgram(ProgramId);
 
             //clean intermediates
             GL.DeleteShader(vs);
             GL.DeleteShader(fs);
-
-            return shaderProgram;
         }
-        public static void ParseShader(string path, out string shaderVertex, out string shaderFragment)
+        private void ParseShader(string path, out string shaderVertex, out string shaderFragment)
         {
             StreamReader r = new StreamReader(path);
 
@@ -62,7 +62,7 @@ namespace test
             shaderFragment = buffers[1];
         }
         
-        public static int CompileShader(string source, ShaderType type)
+        private int CompileShader(string source, ShaderType type)
         {
             int id = GL.CreateShader(type);
 
@@ -79,6 +79,26 @@ namespace test
             }
 
             return id;
+        }
+
+        public void Use()
+        {
+            GL.UseProgram(ProgramId);
+        }
+
+        public void Destroy()
+        {
+            GL.DeleteProgram(ProgramId);
+        }
+
+        public void SetInt(string name, int value)
+        {
+            GL.Uniform1(GL.GetUniformLocation(ProgramId, name), value);
+        }
+
+        public void SetMatrix4(string name, ref Matrix4 matrix)
+        {
+            GL.UniformMatrix4(GL.GetUniformLocation(ProgramId, name),false, ref matrix);
         }
     }
 }
